@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>registration form</title>
+    <link rel="stylesheet" type="text/css" href="ibm.css">
+</head>
+<body>
+	<div class="main">
+	<div class="register">
+	<h2>REGISTER HERE:</h2>
+	<form id="register" method="post">
+	<label>First Name:</label>
+	<br>
+	<input type="text" name="fname" id="name" placeholder="EnterYour First Name">
+	<br><br>
+	<label>Last Name:</label>
+	<br>
+	<input type="text" name="lname" id="name" placeholder="EnterYour Last Name">
+	<br><br>
+	<label>Age:</label>
+	<br>
+	<input type="number" name="age" min="18" max="23">
+	<br><br>
+	<label>Email:</label>
+	<br>
+	<input type="email" name="email" id="name" placeholder="EnterYour Valid Email" autocomplete="off">
+	<br><br>
+    <label>Gender:</label>
+    <br>
+    &nbsp;&nbsp;&nbsp;
+    <input type="radio" name="gender" id="male">
+    <span id="male">Male</span>
+    &nbsp;&nbsp;&nbsp;
+    <input type="radio" name="gender" id="female">
+    &nbsp;
+    <span id="female">Female</span>
+    <br><br>
+    <label>known Language:</label>
+    <br>
+    &nbsp;&nbsp;&nbsp;
+    <input type="checkbox" name="lang" id="hindi">
+    &nbsp;
+    <span id="hindi">Hindi</span>  
+    &nbsp;&nbsp;&nbsp;
+    <input type="checkbox" name="lang" id="eng">
+    &nbsp;
+    <span id="eng">English</span>
+    &nbsp;&nbsp;&nbsp;
+    <input type="checkbox" name="lang" id="tamil">
+    &nbsp;
+    <span id="tamil">Tamil</span>
+    <br><br>
+    <label>Qualification:</label>
+    <select><option>UG</option><option>PG</option><option>arts</option></select>
+    <br><br>
+    <label>DOB:</label>
+    <input type="date" name="sdate">
+    <br><br>
+    <label>Address:</label>
+    <textarea name="address" name="3" cals="20"></textarea>
+    <br><br>
+    <label>Upload your photo:</label>
+    <input type="file" name="resume">
+    <br><br>
+    <input type="submit" value="submit" name="submit" id="submit">
+    
+
+	</form>
+			
+	</div>
+	</div>
+
+</body>
+</html>
