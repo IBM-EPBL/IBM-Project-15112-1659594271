@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>LOGIN PORT</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<style type="text/css">
+	*{
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    }
+    body{
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(to right,#3f5efb,#fc466b);
+    }
+    form{
+    	width: 40rem;
+    	height: 42rem;
+    	display: flex;
+    	flex-direction: column;
+    	background: rgba(255,255, 255, 0.06);
+    	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 37);
+    	border-radius: 30px;
+    	border-left: 1px solid rgba(255, 255, 255, .3);
+    	border-top: 1px solid rgba(255, 255, 255, .3);
+    }
+    form:before{
+    	content: '';
+    	position: absolute;
+    	bottom: 5%;
+    	right: 28%;
+    	width: 180px;
+    	height: 180px;
+    	background: magenta;
+    	border-radius: 80%;
+    	z-index: -1;
+    	opacity: .9;
+    }
+    form:after{
+    	content: '';
+    	position: absolute;
+    	top: 1%;
+    	left: 28%;
+    	width: 150px;
+    	height: 150px;
+    	background: magenta;
+    	border-radius: 200%;
+    	z-index: -1;
+    	opacity: .8;
+    }
+    h1{
+    	font-size: 50px;
+    	text-align: center;
+    	color: white;
+    	text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    	letter-spacing: 3px;
+    	margin-bottom: 5%;
+    	opacity: .7;	
+    }
+    label{
+    	font-size: 20px;
+    	color: white;
+    	margin-left: 10%;
+    	opacity: .8;
+    	text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    }
+    input{
+    	width: 80%;
+    	margin: 5% auto;
+    	margin-bottom: 8%;
+    	border: none;
+    	outline: none;
+    	background: transparent;
+    	color: white;
+    	border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    	opacity: .8;
+    }
+	button{
+    	width: 50%;
+    	margin: 3% auto;
+    	color: white;
+    	font-size: 15px;
+    	opacity: .7;
+    	background: rgba(255, 255, 255, 0.06);
+    	padding: 8px 20px;
+    	border: none;
+    	outline: none;
+    	border-radius: 20px;
+    	text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2);
+    	box-shadow: 3px 3px 5px rgba(31, 38, 135, 37);
+    	border-left: 1px solid rgba(255, 255, 255, 0.3);
+    	border-top: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        a{
+        	font-size: 12px;
+        	text-align: center;
+        	color: white;
+        	opacity: .7;
+
+        }
+		
+    
+</style>
+ </head>
+<body>
+    <form action="/log" method="post">
+		<h1>LOGIN</h1>
+		<label>Email:</label>
+		<input type="text" placeholder=" USERNAME" id="name" name="email" required autocomplete="off">
+		<label>Password</label>
+		<input type="password" placeholder="PASSWORD" id="name" name="password">
+		
+		<button>Login</button>
+		<a href="register form.html" class="text">Sign up</a>
+
+	</form>
+
+</body>
+</html>
