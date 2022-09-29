@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title> forms</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<style type="text/css">
+
+*{
+    padding: 0.5px;
+     margin: 0.5px;
+     box-sizing: content-box;
+}
+.ax{
+    padding-left: 525px;
+    padding-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+form{
+    border: 5px solid black;
+    width:550px;
+    background-position: center;
+    color: black;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 37);
+    border-radius: 50px;
+    border-left: 1px solid rgba(255, 255, 255, .3);
+    border-top: 1px solid rgba(255, 255, 255, .3);
+    border-color: green;
+    margin-left:350px;
+    margin-top:180px;
+    
+    }
+}
+.box{
+    padding: 10px;
+    width: 20px;
+
+}
+
+ .reg{
+    padding-right:200px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.label{
+    border-width: 50px ;
+}
+body{
+	background-color: pink;
+	background-position: center;
+}
+
+</style>
+	</head>
+<body >
+<form action="/login" method="post">
+	<center><h1> Login Id:</h1>
+		<h2> EMAIL:<input type="text" name="email" id="uname"></h2>
+		
+		<h2>Password:<input type="password" name="password" id="pword"></h2><br><br>
+		<button value="submit">LOGIN</button>
+        <p>New User?<a href="index.html">SIGN UP</a></p>
+    </form></center>
+</body>
+</html>
