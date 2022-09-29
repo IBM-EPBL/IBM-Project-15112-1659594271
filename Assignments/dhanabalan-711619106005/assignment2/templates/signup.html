@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Styles/style.css') }}">
+</head>
+<body>
+    <div class="Signup-box">
+    <h1>Sign Up</h1>
+    <h4>It's free and only takes a minute</h4>
+    <form  action="\register" method="post">
+        <label for=""> Name:</label>
+        <input type="text" placeholder="" name="name">
+        <label for="">Roll NO:</label>
+        <input type="text" palceholder="" name="roll">
+        <label for="">Email:</label>
+        <input type="email" placeholder="" name="email">
+        <label for="">Password:</label>
+        <input type="password" placeholder="" name="password">
+        <label for="">Confirm Passsword:</label>
+        <input type="password" placeholder="">
+        <button value="submit">SIGNUP</button>
+     </form>
+        <p>By clicking the Sign up button, you agree to our <br>  
+        <a href="#">Terms and Condition</a>and <a href="#">Policy privacy</a>
+        </p>  
+    </div>
+    <p class="para-2">Already have an account? <a href="login.html">Login here</a></p>
+</body>
+</html>
