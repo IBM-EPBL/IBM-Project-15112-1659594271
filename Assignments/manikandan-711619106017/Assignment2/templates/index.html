@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Styles/style.css') }}" />
+</head>
+<body>
+
+
+
+
+
+<div class="container">
+    <div class="title">Registration</div>
+    <form action="/receivedata" method="post">
+      <div class="user__details">
+        <div class="input__box">
+          <span class="details">Full Name</span>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="input__box">
+          <span class="details">Username</span>
+          <input type="text" id="username">
+        </div>
+        <div class="input__box">
+          <span class="details">Email</span>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="input__box">
+          <span class="details">Phone Number</span>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="input__box">
+          <span class="details">Password</span>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div class="input__box">
+          <span class="details">Confirm Password</span>
+          <input type="password" id="confirm_password">
+        </div>
+  
+      </div>
+      <div class="button">
+        <input type="submit" value="Register">
+      </div>
+      ALready registered?<a href="log.html" style="text-decoration:none  ;">LOGIN</a>
+      
+        </div>
+      </div>
+      
+      
+    </form>
+  </div>
+      
+</body>
+</html>

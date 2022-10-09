@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Styles/style.css') }}">
+</head>
+<body>
+    <div class="Login-box">
+        <h1>Login</h1>
+         <form action="\login" method="post">
+    <label for="">Email:</label>
+    <input type="email" placeholder="" name="email" required>
+    <label for="">Password:</label>
+    <input type="password" placeholder="" name="password" required>
+    <button value="submit">Login</button>
+         </form>
+    </div>
+    <p class="para-2">Not have an account? <a href="signup.html">Sign Up Here</a></p>
+</body>
+</html>
+
+    
