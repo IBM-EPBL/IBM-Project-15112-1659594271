@@ -7,9 +7,7 @@ from db import ibm_db
 app = Flask(__name__)
 
 
-@app.route("/")
-def log():
-  return render_template("index.html")
+
 
 @app.route("/log.html")
 def home():
