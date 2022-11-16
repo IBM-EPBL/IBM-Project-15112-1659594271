@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+  
+
+  
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+      <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+
+      <style>
+        /* Googlefont Poppins CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.sidebar{
+  position: fixed;
+  height: 100%;
+  width: 240px;
+  background: #0A2558;
+  transition: all 0.5s ease;
+}
+.sidebar.active{
+  width: 60px;
+}
+.sidebar .logo-details{
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.sidebar .logo-details iconify-icon {
+  font-size: 28px;
+  font-weight: 500;
+  color: #fff;
+  min-width: 60px;
+  text-align: center
+}
+
+.sidebar .logo-details .logo_name{
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+}
+.sidebar .nav-links{
+  margin-top: 10px;
+}
+.sidebar .nav-links li{
+  position: relative;
+  list-style: none;
+  height: 50px;
+}
+.sidebar .nav-links li a{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+.sidebar .nav-links li a.active{
+  background: #081D45;
+}
+.sidebar .nav-links li a:hover{
+  background: #081D45;
+}
+.sidebar .nav-links li i{
+  min-width: 60px;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+.sidebar .nav-links li a .links_name{
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.sidebar .nav-links .log_out{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.home-section{
+  position: relative;
+  background: #f5f5f5;
+  min-height: 100vh;
+  width: calc(100% - 240px);
+  left: 240px;
+  transition: all 0.5s ease;
+}
+.sidebar.active ~ .home-section{
+  width: calc(100% - 60px);
+  left: 60px;
+}
+.home-section nav{
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: calc(100% - 240px);
+  left: 240px;
+  z-index: 100;
+  padding: 0 20px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+}
+.sidebar.active ~ .home-section nav{
+  left: 60px;
+  width: calc(100% - 60px);
+}
+.home-section nav .sidebar-button{
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+}
+nav .sidebar-button i{
+  font-size: 35px;
+  margin-right: 10px;
+}
+.home-section nav .search-box{
+  position: relative;
+  height: 50px;
+  max-width: 550px;
+  width: 100%;
+  margin: 0 20px;
+
+}
+form{
+  display:flex;
+  flex-direction:row;
+}
+button {
+  
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background: #2697FF;
+  right: 1px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 4px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  border-color: #2697FF;
+  font-size:12px;
+}
+button :hover{
+  background:red;
+}
+
+nav .search-box input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  background: #F5F6FA;
+  border: 2px solid #EFEEF1;
+  border-radius: 6px;
+  font-size: 18px;
+  padding: 0 15px;
+  
+}
+nav .search-box .bx-search{
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background: #2697FF;
+  
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 4px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  font-size: 22px;
+  transition: all 0.4 ease;
+}
+.home-section nav .profile-details{
+  display: flex;
+  align-items: center;
+  background: #F5F6FA;
+  border: 2px solid #EFEEF1;
+  border-radius: 6px;
+  height: 50px;
+  min-width: 190px;
+  padding: 0 15px 0 2px;
+}
+
+nav .profile-details .admin_name{
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  margin: 0 10px;
+  white-space: nowrap;
+}
+nav .profile-details i{
+  font-size: 25px;
+  color: #333;
+}
+
+
+.boxed {
+  width: 100vh;
+  padding: 50px;
+  margin-left:150px;
+  height:80vh;
+  top: 0%;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  box-shadow: 0 0 10px 1px #0d5dcc;
+  margin-bottom: 5%;
+  overflow:hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+.iconclr {
+  color: rgb(66, 66, 130);
+  padding-right: 5px;
+}
+
+
+.companylogo {
+  position: static;
+  margin-left: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 30%;
+}
+
+.companylogooutbox {
+  position: relative;
+  left: -5px;
+  width: 30%;
+  height: 62px;
+  margin-bottom: 2%;
+}
+
+
+
+
+
+
+.content {
+  padding: 13px 16px;
+  display: flex;
+  border: 2px solid #eae2e1;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+
+
+.text {
+  font-size: 21px;
+  margin-left: 30px;
+  color: grey;
+}
+
+
+
+@keyframes animate {
+  0% {
+    background-position: left;
+  }
+
+  100% {
+    background-position: right;
+  }
+}
+
+.boxed_2 {
+  padding: 8px;
+  width: 1000px;
+  top: 0%;
+  height:550px;
+  border-radius: 8px;
+  
+}
+.container{
+  padding-left:100px;
+}
+
+.image{
+  width: 200px;
+  transition: transform 0.9s ease-in-out;
+ transition-delay: 0.6s;
+}
+
+
+      </style>
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	 <script>
+		function companydetails(obj) {
+			var jobid = document.getElementById('jobid')
+			var cname = document.getElementById('cname')
+			var role = document.getElementById('role')
+			var salary = document.getElementById('salary')
+			var skill = document.getElementById('skill')
+			var ex = document.getElementById('ex')
+			var job_location = document.getElementById('job_location')
+			var vacancy = document.getElementById('vacancy')
+			var link = document.getElementById('link')
+			var logo = document.getElementById('logo')
+      var date = document.getElementById('d')
+      var date1 = document.getElementById('e')
+      var f = document.getElementById('f')
+
+
+
+
+			var json = JSON.parse(decodeHtml('{{companies}}'));
+			var id = obj.getAttribute('id');
+			var clickedcompany = json.find(function (obj) {
+				return obj.cname === id;
+			});
+			jobid.innerHTML = clickedcompany.jobid
+			cname.innerHTML = clickedcompany.cname
+			role.innerHTML = clickedcompany.role
+			salary.innerHTML = clickedcompany.salary
+			skill.innerHTML = clickedcompany.skill
+			ex.innerHTML = clickedcompany.ex
+			job_location.innerHTML = clickedcompany.job_location
+			vacancy.innerHTML = clickedcompany.vacancy
+			link.href = clickedcompany.link
+			logo.src = clickedcompany.logo
+		}
+	 </script>
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <iconify-icon icon="cib:skillshare"></iconify-icon>
+      <span class="logo_name" style="font-weight: 500; font-size: medium;">JOB RECOMMENDER</span>
+    </div>
+      <ul class="nav-links">
+        <li class="admin">
+          <a href="/admin2">
+            <i class='bx bx-user' ></i>
+           <span class="links_name">Admin Login</span>
+          </a>
+        </li>
+        <li class="admin">
+          <a href="/employer.html">
+            <i class='bx bx-user' ></i>
+           <span class="links_name">Employer Login</span>
+          </a>
+        </li>
+        <li class="log_out">
+          <a href="/logout" >
+            <i class='bx bx-log-out'></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Find Jobs</span>
+      </div>
+
+      
+      <div class="search-box">
+       <form action="/home" method="post">
+        <input type="text" placeholder="Job title" style="height:50px;text-align: center;" name="search">
+		 <i class='bx bx-search' ></i>
+        <button type="submit" class="search">search</button>
+      </form>
+        </div>
+   
+      
+      <div class="profile-details">
+        <!--<img src="images/profile.jpg" alt="">-->
+        <span class="admin_name">{{data.EMAIL}}</span>
+        <i class='bx bx-chevron-down' ></i>
+        </div>
+      </nav>
+	  
+     <div class="info">
+	  {%if arr!=[]%}
+		
+		{% for i in arr %}
+		<div class="boxed">
+			<div class="boxedcontent">
+				<spam>
+					<img class="companylogo" src='{{i.logo}}' >
+				</spam>
+				<li style="list-style:none ;">
+          {{i.cname}}
+				</li>
+				<ul style="list-style:none;">
+					<img src="{{ url_for('static', filename='images/3.svg') }}" class="image" alt="" />
+					<li>Role : {{i.role}}</li>
+					<li>Experience: {{i.ex}}</li>
+					<li>Skill : {{i.skill}}</li>
+					<li>Vacancy : {{i.vacancy}}</li>
+					<li>Stream : {{i.stream}}</li>
+					<li>Job Location : {{i.job_location}}</li>
+					<li>Salary : {{i.salary}}</li>
+					<li>APPLICATION LINK: <a href={{i.link}}>{{i.link}}</a>  
+          <li>DATE POSTED: {{i.d}}</li>
+          <li>LAST DATE TO APPLY: {{i.e}}</li>
+          <li>JOB DESCRIPTION LINK: <a href={{i.link}}>{{i.f}}</a>  
+          </li>
+				</ul>
+			</div>
+		</div>
+</div>
+		{% endfor %}
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	</div>
+	{% else %}
+  
+             <div class="boxed_2">
+		<p style="margin:100px; margin-top: 100px; margin-left: 350px;">Oops! Currently there are no such job openings</p>
+	</div>
+	{%endif%}
+
+	
+
+		</div>
+    </section>
+	
+  <script>
+   let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+  sidebar.classList.toggle("active");
+  if(sidebar.classList.contains("active")){
+  sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+  sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
+ </script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Styles/style.css') }}" / >
+
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+    <script src="{{ url_for('static', filename='Js/hide.js') }}"></script>
+    <div class="container">
+        <div class="forms-container">
+            <div class="signin-signup">
+            <form action="/validate" class="sign-in-form" method="post">
+                <h3 class="title">OTP</h3>
+                <div class="cont">
+                    <h6 id="box">
+                       {{mesg}}
+                    </h6>
+                  </div>
+                <div class="input-field">
+                    <i class="fa fa-key"></i>
+                    <input type="text" placeholder="OTP" / name="otp" required>
+                </div>
+                <input type="submit" class="btn" value="Verify" />
+                  </div>
+            </form>
+        </div>
+        <div class="panels-container">
+        <div class="panel left-panel"`>
+            <div class="content">
+              <h3 id="change"> 
+                 Email Verification
+              </h3> <br>
+            </div>
+           
+            <img src="{{ url_for('static', filename='img/otp.svg') }}" class="image" alt="" />
+          </div>
+        </div>
+        </div>
+        
+      
+</body>
+</html>
