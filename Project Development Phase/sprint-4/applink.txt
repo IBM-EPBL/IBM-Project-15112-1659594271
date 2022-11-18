@@ -1,5 +1,0 @@
-http://159.122.183.53:30731
-
-admin login and password:
-username:admin
-password:123
