@@ -4,13 +4,13 @@
 ## TeamId:PNT2022TMID42796
 ## sprint-4
 JOB RECOMMENDERAPP
-Mailerror due to password change registration is not working:
+smtpMailerror due to password change registration is not working:use details to login
 userlogin
-mani567459@outlook.com
-8838612759
+email:mani567459@outlook.com
+password:8838612759
 employer login:
-mani56459@outlook.com
-12345678
+email:mani56459@outlook.com
+password:12345678
 ## DEMO
 Live now click start link
 
